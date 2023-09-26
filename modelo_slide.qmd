@@ -1,0 +1,88 @@
+---
+title: "Projeto Análise Climática"
+author: "Bruna Barreto"
+format:
+  revealjs: 
+    theme: simple
+
+---
+
+# Área
+
+## Meio Ambiente (Clima) 
+
+- Motivação:
+
+*A mudança Climática é um dos maiores desafios enfrentados pelo mundo hoje, e fazer análises de dados do clima pode nos ajudar a entender melhor como o clima vem mudando através do tempo e como isso tem afetado o planeta.
+Com a análise de dados é possível entender como diferentes padrões climáticos e diferentes eventos podem impactar diversas comunidades.*
+
+::: {.notes}
+Não tenho certeza ainda se o meu estudo é metereológico ou climático.
+:::
+
+---
+- E como essa questão afeta o Brasil?
+
+Segundo a National Geographic Brasil "Alguns impactos desse desequilíbrio climático já podem ser notados no Brasil. A região Sudeste e parte do Nordeste sofrem com chuvas intensas, que deixam mortos e desabrigados. No Sul, secas históricas causam desabastecimento de água em centenas de municípios. No Norte, a bacia amazônica tem enchentes históricas e o processo de savanização da floresta pode aumentar as temperaturas a níveis fatais."(Redação National Geographic, 2022)
+
+::: {.notes}
+Isso é meio que o porque isso é importante
+:::
+
+# Base de dados
+
+## Fonte
+
+O Instituto Nacional de Metereologia(INMET), orgão do Ministério da Agricultura e Cultura fornece informações meteorológicas. O orgão trabalha por meio do monitoramento, análise e previsão de tempo e de clima. (INMET, 2022)
+
+<img src="logo_inmet_portal.png" alt="INMP" style="width:200px;float:right;margin-left: 10px;margin-top:10px;">
+
+## Variáveis {.smaller}
+
+DADOS HISTÓRICOS ANUAIS 2000-2023
+
+```{r}
+
+library(readr)
+
+fortaleza_clima_2003 <- read.csv2("2003/INMET_NE_CE_A305_FORTALEZA_18-02-2003_A_31-12-2003.CSV", sep = ";", header = TRUE, skip = 8, dec = ',', fileEncoding = "ISO-8859-15")
+```
+
+- Exemplo: Conjunto de dados tempo de fortaleza em 2003
+
+```{r}
+#| echo: true
+
+str(fortaleza_clima_2003)
+
+```
+
+## Pesquisa {.smaller}
+
+
+Possíveis Tópicos de Pesquisa:
+
+- Investigar como as temperaturas estão mudando em uma região específica ao longo do tempo, ou como os padrões pluviométricos estão afetando o rendimento das plantações. (Nesse último caso seria preciso relacionar os dados do clima com outros dados geográficos)
+
+- Verificar se existe alguma correlação entre as variáveis, por exemplo analisar a relação entre dados de temperatura máxima e pressão atmosférica.
+
+- Analisar se eventos climáticos extremos são causados ou vinculados às mudanças climáticas.
+
+# Desafios
+
+## Complexidade
+
+- Big Data
+- Qualidade dos dados
+- Tópicos avançados de Estatística e Machine Learning (Climatologia)
+- Comunicação dos dados
+- Complexidade do assunto
+
+## Referência {.smaller}
+
+- BBC News. Aquecimento global: como o aumento da temperatura pode afetar o Nordeste do Brasil. Publicado em 6 de outubro de 2021. Acesso em 16 de abril de 2023.
+
+- Ventura, L.M.B., Ramos, M.B., Gioda, A. et al. Air quality monitoring assessment during the 2016 Olympic Games in Rio de Janeiro, Brazil. Environ Monit Assess 191, 369 (2019). https://doi.org/10.1007/s10661-019-7496-y
+
+
+
