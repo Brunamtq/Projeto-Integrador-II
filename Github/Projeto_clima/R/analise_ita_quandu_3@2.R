@@ -5,7 +5,8 @@ pacman::p_load(googledrive,
                skimr,
                gridExtra,
                tidyverse,
-               usethis)
+               usethis,
+               ProjectTemplate)
 
 
 # dados -------------------------------------------------------------------------------------------------------------
