@@ -6,7 +6,8 @@ pacman::p_load(googledrive,
                gridExtra,
                tidyverse,
                usethis,
-               ProjectTemplate)
+               ProjectTemplate,
+               gtExtras)
 
 
 # dados -------------------------------------------------------------------------------------------------------------
@@ -34,6 +35,8 @@ ita_quandu = ita_quandu |>
 # análise descritiva ------------------------------------------------------------------------------------------------
 
 ita_quandu |> skim()
+## -- Table Observable 
+#ita_quandu |> gtExtras:: gt_plt_summary()
 
 
 ## análise gráfica --------------------------------------------------------------------------------------------------
